@@ -12,16 +12,12 @@ spec:
     - containerPort: 8080
     env:
     - name: DBHOST
-      value: "10.244.0.5"
-    env:
+      value: "10-244-0-7.default.pod.cluster.local"
     - name: DBPORT
       value: "3306"
-    env:
     - name: DBUSER
       value: "root"
-    env:
     - name: DBPWD
       value: "pw"
-    env:
     - name: APP_COLOR
       value: "blue"
