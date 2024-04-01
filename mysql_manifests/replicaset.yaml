@@ -8,14 +8,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my_db
+      app: mysql
   template:
     metadata:
       labels:
-        app: my_db
+        app: mysql
     spec:
       containers:
-      - name: my-db
+      - name: mysql
         image: 579130819361.dkr.ecr.us-east-1.amazonaws.com/mysql:latest
         ports:
         - containerPort: 3306
