@@ -34,9 +34,9 @@ aws ecr get-login-password --region us-east-1 | docker login --username AWS --pa
 
 ## 1. Local K8s cluster
 
-We can see our local k8s kind cluster using `kubectl get nodes` and more details about it inclduing its IP address using `kubectl describe node kind-control-plane`
+We can see our local k8s kind cluster using `kubectl get nodes` and more details about it inclduing its IP address using `kubectl describe node kind-control-plane` - in this instance, we can see that the IP address is `172.18.0.2`.
 
-## 2. Namespae and pod deployment
+## 2. Namespace and pod deployment
 
 We create two namespaces and deploy our pods into them with the following commands:
 
@@ -98,7 +98,7 @@ kubectl get rs -n db
 kubectl get rs -n app
 ```
 
-From the output we get from the commands, we see that the pods in the original ReplicaSet have been replaced with pods created for the new deployment, showing us that the ReplicaSet created in Step 3 is not a part of the new deployment created.
+From the output we get from the commands, we see that the pods in the original ReplicaSet are intact even after the new deployment, showing us that the ReplicaSet created in Step 3 is a part of the new deployment created.
 
 ## 5. Creating services
 
